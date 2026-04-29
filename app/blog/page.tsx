@@ -1,150 +1,40 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
-
-export const metadata: Metadata = {
-  title: 'Blog — Wellness Travel, Low-Tox Living & Reiki | Wellness Getaways',
-  description: 'Guides, tips, and stories about low-tox travel, chemical sensitivity, Reiki Tummo® healing, and wellness retreats in the Blue Ridge Mountains of North Carolina.',
-}
 
 const posts = [
   {
-    slug: '#',
-    category: 'Low-Tox Living',
-    title: 'Why Most Vacation Rentals Make Chemically Sensitive Guests Sick (And What We Do Differently)',
-    excerpt: 'Most rentals are loaded with synthetic fragrances, chemical cleaning products, and off-gassing materials. Here\'s the full list of what we eliminated — and what we replaced it with.',
-    date: 'April 15, 2025',
-    readTime: '6 min read',
+    title: 'Why Reiki Tummo® is Transformative',
+    href: '/blog/why-reiki-tummo-is-transformative',
+    excerpt: 'A gentle yet powerful path to healing, balance, and spiritual growth.',
+    status: 'Published',
   },
   {
-    slug: '#',
-    category: 'Reiki & Healing',
-    title: 'What It Actually Feels Like to Stay in a Reiki-Charged Space',
-    excerpt: 'Guests describe it as "a different quality of air," "the best sleep of my life," and "something I can\'t explain but definitely felt." Here\'s what\'s actually happening energetically.',
-    date: 'March 28, 2025',
-    readTime: '5 min read',
+    title: '7 Unforgettable Experiences to Awaken Your Senses in Asheville',
+    href: '/blog/7-unforgettable-experiences-to-awaken-your-senses-in-asheville',
+    excerpt: 'A local guide to the best sensory-rich experiences in Asheville.',
+    status: 'Published',
   },
   {
-    slug: '#',
-    category: 'Travel Guide',
-    title: 'The Best Wellness Hikes Near Asheville, NC',
-    excerpt: 'From the Black Balsam Knob to the Art Loeb Trail, these are the hikes worth doing when you\'re staying near downtown Asheville — ranked by scenery, difficulty, and how good you\'ll feel after.',
-    date: 'March 10, 2025',
-    readTime: '7 min read',
-  },
-  {
-    slug: '#',
-    category: 'Reiki & Healing',
-    title: 'Reiki Tummo® vs Traditional Reiki: What\'s the Difference?',
-    excerpt: 'Both are energy healing modalities, but Reiki Tummo® operates from a fundamentally different source. Here\'s a plain-language breakdown of how they differ — and why it matters for your healing.',
-    date: 'February 20, 2025',
-    readTime: '8 min read',
-  },
-  {
-    slug: '#',
-    category: 'Travel Guide',
-    title: 'Planning a Wellness Weekend at Lake Lure: The Full Itinerary',
-    excerpt: 'Kayaking at sunrise, a Reiki session before lunch, Chimney Rock in the afternoon, and a hot springs soak in the evening. Here\'s a perfect two-day wellness itinerary at Rumbling Bald Resort.',
-    date: 'February 5, 2025',
-    readTime: '9 min read',
-  },
-  {
-    slug: '#',
-    category: 'Low-Tox Living',
-    title: 'The 10 Questions to Ask Before Booking Any Vacation Rental If You Have MCS',
-    excerpt: 'Most hosts have no idea what MCS is or why it matters. Here are the 10 questions that will immediately tell you whether a rental is safe for you — and how to read between the lines of the answers.',
-    date: 'January 18, 2025',
-    readTime: '5 min read',
+    title: 'More Wellness Stories Coming Soon',
+    href: '/blog/coming-soon',
+    excerpt: 'The rest of the content roadmap so the page feels real and expansive.',
+    status: 'Preview',
   },
 ]
 
-const categoryColors: Record<string, string> = {
-  'Low-Tox Living': 'bg-green-50 text-green-700',
-  'Reiki & Healing': 'bg-purple-50 text-purple-700',
-  'Travel Guide': 'bg-blue-50 text-blue-700',
-}
-
-export default function BlogPage() {
-  const [featured, ...rest] = posts
-
+export default function BlogIndex() {
   return (
-    <>
-      {/* Header */}
-      <section className="pt-32 pb-14 bg-forest-dark text-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-sage-light">The Wellness Getaways Blog</span>
-          <h1 className="font-lora text-5xl text-white mt-3 mb-4">Low-Tox Travel &amp; Healing</h1>
-          <p className="text-white/70 text-lg max-w-xl mx-auto">
-            Guides, stories, and honest advice on chemical sensitivity, energy healing, and finding truly restorative places to stay.
-          </p>
-        </div>
-      </section>
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14">
-
-        {/* Featured post */}
-        <div className="mb-14">
-          <div className="bg-white rounded-2xl border border-stone-border shadow-sm overflow-hidden md:grid md:grid-cols-5">
-            <div className="md:col-span-2 bg-gradient-to-br from-forest to-forest-dark flex items-center justify-center p-12">
-              <span className="text-white/20 font-lora text-8xl select-none">✦</span>
-            </div>
-            <div className="md:col-span-3 p-8">
-              <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 ${categoryColors[featured.category]}`}>
-                {featured.category}
-              </span>
-              <h2 className="font-lora text-2xl text-forest-dark mb-3 leading-snug">{featured.title}</h2>
-              <p className="text-stone-muted text-sm leading-relaxed mb-5">{featured.excerpt}</p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-stone-muted">{featured.date} · {featured.readTime}</span>
-                <Link href={featured.slug} className="text-sm font-semibold text-forest hover:text-forest-dark transition-colors">
-                  Read More →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {rest.map((post) => (
-            <article key={post.title} className="bg-white rounded-2xl border border-stone-border shadow-sm overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-200">
-              <div className="bg-gradient-to-br from-cream-warm to-cream-soft h-36 flex items-center justify-center">
-                <span className="text-forest/20 font-lora text-6xl select-none">✦</span>
-              </div>
-              <div className="p-5 flex flex-col flex-1">
-                <span className={`inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3 w-fit ${categoryColors[post.category]}`}>
-                  {post.category}
-                </span>
-                <h3 className="font-lora text-lg text-forest-dark mb-2 leading-snug flex-1">{post.title}</h3>
-                <p className="text-stone-muted text-sm leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-stone-border/60">
-                  <span className="text-xs text-stone-muted">{post.date} · {post.readTime}</span>
-                  <Link href={post.slug} className="text-xs font-semibold text-forest hover:text-forest-dark transition-colors">
-                    Read →
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+    <div className="pt-28 pb-20 max-w-6xl mx-auto px-4">
+      <h1 className="text-4xl font-bold mb-6">Blog</h1>
+      <div className="grid md:grid-cols-3 gap-6">
+        {posts.map((post) => (
+          <article key={post.title} className="bg-white rounded-2xl p-6 border border-stone-border">
+            <p className="text-xs uppercase tracking-wide text-forest mb-3">{post.status}</p>
+            <h2 className="text-2xl font-semibold mb-3">{post.title}</h2>
+            <p className="text-stone-600 mb-5">{post.excerpt}</p>
+            <Link href={post.href} className="text-forest font-semibold">Read more →</Link>
+          </article>
+        ))}
       </div>
-
-      {/* Newsletter */}
-      <section className="py-16 bg-forest text-white">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <h2 className="font-lora text-3xl mb-3">Get New Posts in Your Inbox</h2>
-          <p className="text-white/70 mb-8">Low-tox travel tips, healing practices, and new property updates — no spam, ever.</p>
-          <div className="flex gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 px-4 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60 text-sm"
-            />
-            <button className="px-6 py-3 rounded-full bg-white text-forest font-semibold text-sm hover:bg-cream transition-colors duration-200 whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   )
 }
