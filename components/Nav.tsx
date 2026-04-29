@@ -38,7 +38,7 @@ export default function Nav() {
             {links.map((l) => (
               <Link key={l.href} href={l.href}
                 className={`text-sm font-medium transition-colors duration-200 hover:text-forest ${
-                  scrolled ? 'text-stone-muted' : 'text-white/90 hover:text-white'
+                  scrolled ? 'text-stone-800' : 'text-white/90 hover:text-white'
                 }`}>
                 {l.label}
               </Link>
@@ -51,7 +51,7 @@ export default function Nav() {
           </Link>
 
           <button
-            className={`lg:hidden p-2 rounded-md transition-colors ${scrolled ? 'text-forest' : 'text-white'}`}
+            className={`lg:hidden p-2 rounded-md transition-colors ${scrolled ? 'text-stone-800' : 'text-white'}`}
             onClick={() => setOpen(!open)}
             aria-label={open ? 'Close menu' : 'Open menu'}>
             {open ? <X size={22} /> : <Menu size={22} />}
