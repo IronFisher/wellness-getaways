@@ -69,11 +69,11 @@ export default function BlogPage() {
   return (
     <>
       {/* Header */}
-      <section className="pt-32 pb-14 bg-cream-soft border-b border-stone-border">
+      <section className="pt-32 pb-14 bg-forest-dark text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-forest">The Wellness Getaways Blog</span>
-          <h1 className="font-lora text-5xl text-forest-dark mt-3 mb-4">Low-Tox Travel &amp; Healing</h1>
-          <p className="text-stone-muted text-lg max-w-xl mx-auto">
+          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-sage-light">The Wellness Getaways Blog</span>
+          <h1 className="font-lora text-5xl text-white mt-3 mb-4">Low-Tox Travel &amp; Healing</h1>
+          <p className="text-white/70 text-lg max-w-xl mx-auto">
             Guides, stories, and honest advice on chemical sensitivity, energy healing, and finding truly restorative places to stay.
           </p>
         </div>
