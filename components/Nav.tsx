@@ -9,7 +9,7 @@ const links = [
   { href: '/reiki', label: 'Reiki Sessions' },
   { href: '/blog', label: 'Blog' },
   { href: '/faq', label: 'FAQ' },
-  { href: 'mailto:info@thewellnessgetaways.com', label: 'Contact' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export default function Nav() {
