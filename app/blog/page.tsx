@@ -9,7 +9,7 @@ const posts = [
   },
   {
     title: '7 Unforgettable Experiences to Awaken Your Senses in Asheville',
-    href: '/blog/7-unforgettable-experiences-to-awaken-your-senses-in-asheville',
+    href: '/blog/7-unforgettable-experiences-asheville',
     excerpt: 'A local guide to the best sensory-rich experiences in Asheville.',
     status: 'Published',
   },
