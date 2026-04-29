@@ -25,7 +25,7 @@ const posts = [
     excerpt: 'A local guide to the best sensory-rich experiences in Asheville — from sunrise hikes to forest bathing to craft cideries.',
     date: 'July 8, 2025',
     readTime: '5 min read',
-    image: 'https://cdn.prod.website-files.com/67ee03ef8aaa8b2ff966ef93/685ef9882d511476b554bff0_Asheville_at_dusk_(cropped).jpg',
+    image: '/asheville-experiences-hero.jpg',
   },
   {
     href: '#',

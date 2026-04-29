@@ -65,8 +65,8 @@ export default function AshevilleExperiencesPost() {
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[380px] overflow-hidden">
         <Image
-          src="https://cdn.prod.website-files.com/67ee03ef8aaa8b2ff966ef93/685ef9882d511476b554bff0_Asheville_at_dusk_(cropped).jpg"
-          alt="Asheville NC at dusk — Blue Ridge Mountains"
+          src="/asheville-experiences-hero.jpg"
+          alt="Woman sitting on Blue Ridge mountain overlook at sunrise — Asheville NC"
           fill
           className="object-cover"
           priority
