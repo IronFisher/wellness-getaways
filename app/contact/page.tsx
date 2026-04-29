@@ -1,43 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import Link from 'next/link'
 
-type Status = 'idle' | 'submitting' | 'success' | 'error'
-
 export default function ContactPage() {
-  const [status, setStatus] = useState<Status>('idle')
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    interest: '',
-    message: '',
-  })
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus('submitting')
-    try {
-      const res = await fetch('https://formspree.io/f/xovdkqwb', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(form),
-      })
-      if (res.ok) {
-        setStatus('success')
-        setForm({ name: '', email: '', phone: '', interest: '', message: '' })
-      } else {
-        setStatus('error')
-      }
-    } catch {
-      setStatus('error')
-    }
-  }
+  const [state, handleSubmit] = useForm('xvzlpopa')
 
   return (
     <>
@@ -56,7 +23,7 @@ export default function ContactPage() {
       <div className="bg-cream py-16">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
 
-          {status === 'success' ? (
+          {state.succeeded ? (
             <div className="bg-white rounded-2xl border border-stone-border shadow-sm p-10 text-center">
               <div className="w-14 h-14 rounded-full bg-forest/10 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-7 h-7 text-forest" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
@@ -83,11 +50,10 @@ export default function ContactPage() {
                       name="name"
                       type="text"
                       required
-                      value={form.name}
-                      onChange={handleChange}
                       placeholder="Your full name"
                       className="w-full px-4 py-3 rounded-xl border border-stone-border bg-cream-warm text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition text-sm"
                     />
+                    <ValidationError field="name" errors={state.errors} className="text-xs text-red-500 mt-1" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-forest-dark mb-1.5" htmlFor="email">
@@ -98,11 +64,10 @@ export default function ContactPage() {
                       name="email"
                       type="email"
                       required
-                      value={form.email}
-                      onChange={handleChange}
                       placeholder="you@email.com"
                       className="w-full px-4 py-3 rounded-xl border border-stone-border bg-cream-warm text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition text-sm"
                     />
+                    <ValidationError field="email" errors={state.errors} className="text-xs text-red-500 mt-1" />
                   </div>
                 </div>
 
@@ -115,8 +80,6 @@ export default function ContactPage() {
                       id="phone"
                       name="phone"
                       type="tel"
-                      value={form.phone}
-                      onChange={handleChange}
                       placeholder="(555) 000-0000"
                       className="w-full px-4 py-3 rounded-xl border border-stone-border bg-cream-warm text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition text-sm"
                     />
@@ -128,8 +91,6 @@ export default function ContactPage() {
                     <select
                       id="interest"
                       name="interest"
-                      value={form.interest}
-                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-stone-border bg-cream-warm text-stone-800 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition text-sm"
                     >
                       <option value="">Select a property or topic</option>
@@ -151,26 +112,20 @@ export default function ContactPage() {
                     name="message"
                     required
                     rows={5}
-                    value={form.message}
-                    onChange={handleChange}
                     placeholder="Tell us what you're looking for or any questions you have..."
                     className="w-full px-4 py-3 rounded-xl border border-stone-border bg-cream-warm text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition text-sm resize-none"
                   />
+                  <ValidationError field="message" errors={state.errors} className="text-xs text-red-500 mt-1" />
                 </div>
 
-                {status === 'error' && (
-                  <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
-                    Something went wrong. Please try again or email us directly at{' '}
-                    <a href="mailto:info@thewellnessgetaways.com" className="underline">info@thewellnessgetaways.com</a>.
-                  </p>
-                )}
+                <ValidationError errors={state.errors} className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-4 py-3" />
 
                 <button
                   type="submit"
-                  disabled={status === 'submitting'}
+                  disabled={state.submitting}
                   className="w-full py-3.5 rounded-full bg-forest text-white font-semibold text-sm hover:bg-forest-dark transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {status === 'submitting' ? 'Sending…' : 'Send Message'}
+                  {state.submitting ? 'Sending…' : 'Send Message'}
                 </button>
 
                 <p className="text-xs text-stone-muted text-center">
