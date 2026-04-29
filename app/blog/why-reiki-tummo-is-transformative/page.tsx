@@ -4,8 +4,8 @@ export default function ReikiBlog() {
   return (
     <article className="pt-28 pb-20 max-w-4xl mx-auto px-4 prose prose-stone prose-lg">
       <Image
-        src="https://cdn.prod.website-files.com/67ee03ef8aaa8b2ff966ef23/67ee03ef8aaa8b2ff966f052_Bg-Gallery.jpg"
-        alt="Reiki Tummo"
+        src="/reiki-transformative-hero.jpg"
+        alt="Reiki healing session — hands-on energy work"
         width={1200}
         height={675}
         className="rounded-3xl mb-8"

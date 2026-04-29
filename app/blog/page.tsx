@@ -14,7 +14,7 @@ const featured = {
   excerpt: 'A unique blend of Divine and Kundalini energy, Reiki Tummo® promotes healing, balance, and spiritual growth — and every Wellness Getaways property is intentionally infused with it.',
   date: 'July 1, 2025',
   readTime: '4 min read',
-  image: 'https://cdn.prod.website-files.com/67ee03ef8aaa8b2ff966ef23/67ee03ef8aaa8b2ff966f052_Bg-Gallery.jpg',
+  image: '/reiki-transformative-hero.jpg',
 }
 
 const posts = [
