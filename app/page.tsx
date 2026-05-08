@@ -48,7 +48,7 @@ const pillars = [
   { icon: '🌿', title: 'Certified Organic Linens', body: 'Organic sheets and towels only. No harsh chemical treatments, artificial softeners, or dyes that trigger sensitive skin or respiratory reactions.' },
   { icon: '✨', title: 'Reiki Tummo® Charged', body: 'Every property is energetically cleansed and charged with Reiki Tummo® — crystals at the entryways, prayers, and intentional grounding into the earth.' },
   { icon: '🔮', title: 'Connected to True Source', body: 'The space is programmed to support healing, clarity, and spiritual connection. Guests arrive in a field that actively supports their well-being.' },
-  { icon: '🚫', title: 'Zero Allergen Triggers', body: 'No pets. No smoking. No synthetic perfumes. Designed for guests with MCS, allergies, autoimmune conditions, or high chemical sensitivity.' },
+  { icon: '🚫', title: 'Low-Allergen, Fragrance-Free Environment', body: 'No pets. No smoking. No synthetic perfumes. Designed for guests with MCS, allergies, autoimmune conditions, or high chemical sensitivity.' },
   { icon: '🙏', title: 'Live Reiki Sessions Available', body: 'Book a live Reiki Tummo® or open heart meditation session with your host — from anywhere in the world.' },
 ]
 
