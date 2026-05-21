@@ -57,7 +57,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url('https://cdn.prod.website-files.com/67ee03ef8aaa8b2ff966ef23/67ee03ef8aaa8b2ff966f052_Bg-Gallery.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white pt-20">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/60 mb-5">North Carolina Wellness Retreats</p>
-          <h1 className="font-lora text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
+          <h1 className="font-branch text-5xl sm:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
             Stay Clean.<br /><em>Breathe Easy.</em><br />Come Alive.
           </h1>
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">

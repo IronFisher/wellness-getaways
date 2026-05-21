@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Lora, Raleway } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -16,6 +17,14 @@ const raleway = Raleway({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-raleway',
+  display: 'swap',
+})
+
+// Brand display font — "Branch Regular" by Set Sail Studios.
+// Used selectively for hero and brand-callout moments per Amy Johnson brand guide.
+const branch = localFont({
+  src: './fonts/branch-regular.ttf',
+  variable: '--font-branch',
   display: 'swap',
 })
 
@@ -42,7 +51,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${lora.variable} ${raleway.variable}`}>
+    <html lang="en" className={`${lora.variable} ${raleway.variable} ${branch.variable}`}>
       <body className="font-raleway">
         <Nav />
         <main>{children}</main>

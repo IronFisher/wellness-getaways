@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -6,7 +7,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <h3 className="font-lora text-white text-xl mb-3">Wellness Getaways</h3>
+            <Image
+              src="/brand/logo-white.png"
+              alt="the wellness getaways"
+              width={200}
+              height={60}
+              className="h-12 w-auto mb-4"
+            />
             <p className="text-sm leading-relaxed text-white/60 mb-4">
               Low-tox, Reiki-charged vacation rentals in Asheville and Lake Lure, NC.
               Curated for the chemically sensitive and the spiritually curious.

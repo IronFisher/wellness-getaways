@@ -9,10 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Brand greens — per Amy Johnson brand guide (March 2025)
         forest: {
-          DEFAULT: '#2d5a27',
-          light: '#3d7a34',
-          dark: '#1e3d1b',
+          DEFAULT: '#465745', // brand accent (dark forest)
+          light: '#5a6e58',
+          dark: '#3a4839',
+        },
+        sage: {
+          DEFAULT: '#8ba77d', // brand primary (sage)
+          light: '#a8c096',
         },
         earth: {
           DEFAULT: '#6b4226',
@@ -27,10 +32,6 @@ const config: Config = {
           DEFAULT: '#b45309',
           light: '#d97706',
         },
-        sage: {
-          DEFAULT: '#7a9e7a',
-          light: '#a8c5a8',
-        },
         stone: {
           muted: '#57534e',
           border: '#e5e0d8',
@@ -39,6 +40,7 @@ const config: Config = {
       fontFamily: {
         lora: ['var(--font-lora)', 'Georgia', 'serif'],
         raleway: ['var(--font-raleway)', 'system-ui', 'sans-serif'],
+        branch: ['var(--font-branch)', 'Georgia', 'serif'],
       },
       animation: {
         'fade-up': 'fadeUp 0.6s ease-out forwards',

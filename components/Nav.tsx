@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const links = [
@@ -28,10 +29,15 @@ export default function Nav() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className={`font-lora text-lg font-semibold tracking-wide transition-colors duration-300 ${
-            scrolled ? 'text-forest' : 'text-white'
-          }`}>
-            Wellness Getaways
+          <Link href="/" aria-label="the wellness getaways — home" className="block">
+            <Image
+              src={scrolled ? '/brand/logo-color.png' : '/brand/logo-white.png'}
+              alt="the wellness getaways"
+              width={180}
+              height={54}
+              priority
+              className="h-9 lg:h-11 w-auto transition-opacity duration-300"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-7">
