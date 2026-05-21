@@ -37,7 +37,7 @@ const categories = [
     faqs: [
       {
         q: 'How do I book a stay?',
-        a: 'You can book directly through Airbnb or Yonder — links are on each property page. For direct inquiries or questions before booking, reach out via the contact form or email.',
+        a: 'You can book directly through Yonder — the booking link is on each property page. For direct inquiries or questions before booking, reach out via the contact form or email.',
       },
       {
         q: 'What are your check-in and check-out times?',
@@ -45,7 +45,7 @@ const categories = [
       },
       {
         q: 'What is your cancellation policy?',
-        a: 'Cancellation policies are managed through your booking platform (Airbnb or Yonder). Please refer to the policy listed at the time of your booking for specific terms.',
+        a: 'Cancellation policies are managed through Yonder. Please refer to the policy listed at the time of your booking for specific terms.',
       },
       {
         q: 'Can I book for a longer stay or extended retreat?',
@@ -53,7 +53,7 @@ const categories = [
       },
       {
         q: 'Is there a minimum stay requirement?',
-        a: 'Minimum stay requirements vary by property and season. Current minimums are listed on each property\'s Airbnb and Yonder listing.',
+        a: 'Minimum stay requirements vary by property and season. Current minimums are listed on each property\'s Yonder listing.',
       },
     ],
   },
@@ -70,7 +70,7 @@ const categories = [
       },
       {
         q: 'What nearby amenities are available?',
-        a: 'Amenities vary by property and location. The Lake Lure and Rumbling Bald properties have resort access to pools, golf, tennis, kayaks, paddleboards, a spa, fitness facilities, and more. The Asheville property puts you close to the city\'s wellness scene — hiking, float spas, forest bathing, cideries, and live music. Reach out with specific questions about what\'s available near each property.',
+        a: 'Amenities vary by property and location. The Lake Lure property has full Rumbling Bald Resort access to pools, golf, tennis, kayaks, paddleboards, a spa, fitness facilities, and more. The Asheville property puts you close to the city\'s wellness scene — hiking, float spas, forest bathing, cideries, and live music. Reach out with specific questions about what\'s available near each property.',
       },
       {
         q: 'Is the air filtration medical-grade?',

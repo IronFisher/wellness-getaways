@@ -23,7 +23,6 @@ export default function Footer() {
               {[
                 ['/asheville', 'Asheville Getaway'],
                 ['/lake-lure', 'Lake Lure Getaway'],
-                ['/rumbling-bald', 'Rumbling Bald Getaway'],
                 ['/reiki', 'Reiki Sessions'],
                 ['/blog', 'Blog'],
                 ['/faq', 'FAQ'],

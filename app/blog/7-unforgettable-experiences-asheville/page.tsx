@@ -147,7 +147,7 @@ export default function AshevilleExperiencesPost() {
               At Wellness Getaways, you&apos;re not just booking a trip — you&apos;re choosing to feel more alive and connected to your heart. Each property is designed to support your body, mind, and spirit: organic linens, low-tox environments, Reiki Tummo® energy in every space, and virtual healing sessions or guided meditations available.
             </p>
             <div className="flex flex-wrap gap-3 text-sm text-stone-muted mb-6">
-              {['Asheville Getaway — Bold & artsy', 'Lake Lure Getaway — Serene & scenic', 'Rumbling Bald Getaway — Cozy & nature-wrapped'].map(p => (
+              {['Asheville Getaway — Bold & artsy', 'Lake Lure Getaway — Serene & scenic'].map(p => (
                 <span key={p} className="flex items-center gap-1.5">
                   <svg className="w-3.5 h-3.5 text-forest" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
                   {p}

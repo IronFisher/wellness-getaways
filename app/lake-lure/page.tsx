@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 const amenities = [
   { category: 'Resort Access', items: ['Two outdoor pools & one indoor pool', 'Full-service spa', 'Golf course (18 holes)', 'Kayaks & paddleboards on Lake Lure', 'Tennis & pickleball courts', 'Fitness center', 'Clubhouse & restaurant'] },
-  { category: 'Wellness', items: ['Medical-grade air purifiers', 'Organic cotton linens & towels', 'No synthetic fragrances or dyes', 'Reiki Tummo® charged & grounded', 'Crystal placements at entryways', 'No Teflon cookware'] },
+  { category: 'Wellness', items: ['Medical-grade air purifiers (one per floor)', 'Organic cotton linens & towels', 'No synthetic fragrances or dyes', 'Reiki Tummo® charged & grounded', 'Crystal placements at entryways', 'No Teflon cookware'] },
   { category: 'Property', items: ['2 Bedrooms + bonus sleeping area', '2.5 Bathrooms', 'Private balcony with mountain views', 'Full kitchen', 'Smart TV + high-speed WiFi', 'In-unit washer/dryer'] },
-  { category: 'Location', items: ['Lake Lure, NC', 'Rumbling Bald Resort', '10 min to Chimney Rock State Park', 'Close to Hickory Nut Falls', 'Scenic mountain drives nearby', 'Blue Ridge Parkway accessible'] },
+  { category: 'Location', items: ['Lake Lure, NC', 'Rumbling Bald Resort', '10 min to Chimney Rock State Park', 'Scenic mountain drives nearby', 'Hickory Nut Falls trails nearby', 'Blue Ridge Parkway accessible'] },
 ]
 
 const reviews = [
@@ -85,7 +85,7 @@ export default function LakeLurePage() {
                   Nestled within Rumbling Bald Resort on the shores of Lake Lure, this property delivers what most vacation rentals never attempt: a genuinely clean, intentionally healing space with access to world-class resort amenities.
                 </p>
                 <p>
-                  Wake up to panoramic Blue Ridge Mountain views from your private balcony. Spend the day kayaking on Lake Lure, lounging at the pool, playing golf, or hiking to Hickory Nut Falls — all steps from your door. Come home to a space that breathes clean air, where every product was chosen to support your body rather than burden it.
+                  Wake up to panoramic Blue Ridge Mountain views from your private balcony. Spend the day kayaking on Lake Lure, lounging at the pool, playing golf, or hiking the trails of Chimney Rock State Park — all just minutes from your door. Come home to a space that breathes clean air, with dye-free, fragrance-free soaps, detergents, and cleaning products throughout.
                 </p>
                 <p>
                   With room for up to 8 guests, this is ideal for family gatherings, friend groups, or a restorative retreat. Two bedrooms plus additional sleeping space, 2.5 baths, a full kitchen, and the energy of a space that has been cleared, charged, and held with Reiki Tummo® before your arrival.
@@ -165,7 +165,7 @@ export default function LakeLurePage() {
             <div className="pb-4">
               <h2 className="font-lora text-2xl text-forest-dark mb-4">Location</h2>
               <p className="text-stone-muted leading-relaxed">
-                Rumbling Bald Resort, Lake Lure, NC — nestled in the Blue Ridge Mountains, 10 minutes from Chimney Rock State Park and Hickory Nut Falls. The resort sits directly on Lake Lure, made famous by the film Dirty Dancing. Easy drives to Asheville (45 min) and Charlotte (90 min).
+                Rumbling Bald Resort, Lake Lure, NC — nestled in the Blue Ridge Mountains, 10 minutes from Chimney Rock State Park (with the Hickory Nut Falls trail system nearby). The resort sits directly on Lake Lure, made famous by the film Dirty Dancing. Easy drives to Asheville (45 min) and Charlotte (90 min).
               </p>
             </div>
           </div>
@@ -173,11 +173,12 @@ export default function LakeLurePage() {
           {/* Right: Booking */}
           <div>
             <BookingCard
-              price="$169"
+              price="$289"
               beds="2"
               baths="2.5"
               guests="8"
               highlights={['Mountain Views', 'Resort Access', 'Private Balcony', 'Sleeps 8', 'Low-Tox']}
+              bookingUrl="https://yondernc.com"
             />
           </div>
         </div>

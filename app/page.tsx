@@ -26,25 +26,14 @@ const properties = [
     specs: ['2 Beds', '2.5 Baths', 'Up to 8'],
     highlights: ['Mountain Views', 'Resort Access', 'Private Balcony'],
     description: 'Modern mountain luxury with panoramic Blue Ridge views. Full Rumbling Bald Resort access — pools, spa, golf, kayaks, tennis, and more.',
-    price: '$169',
+    price: '$289',
     href: '/lake-lure',
     image: 'https://cdn.prod.website-files.com/67ee03ef8aaa8b2ff966ef93/67ee7a651968d42ce95c63bd_image_165663209.webp',
-  },
-  {
-    name: 'Rumbling Bald Getaway',
-    location: 'Lake Lure, NC · Apple Valley Villas',
-    badge: 'Lake Lure',
-    specs: ['Studio', '1 Bath', 'Up to 4'],
-    highlights: ['Hillside Views', 'Resort Access', 'Top Floor'],
-    description: 'Private top-floor studio with hillside patio views and full resort access. Perfect for couples or a cozy nature escape near Chimney Rock.',
-    price: '$109',
-    href: '/rumbling-bald',
-    image: 'https://cdn.prod.website-files.com/67ee03ef8aaa8b2ff966ef93/67ee732821adada1ff16a22a_image_165673654.webp',
   },
 ]
 
 const pillars = [
-  { icon: '🌬️', title: 'Medical-Grade Air Quality', body: 'Medical-grade air purifiers in every room. No Teflon cookware. No synthetic fragrances or dyes in any cleaning product, soap, or detergent.' },
+  { icon: '🌬️', title: 'Medical-Grade Air Quality', body: 'Medical-grade air purifiers — one per floor. No Teflon cookware. No synthetic fragrances or dyes in any cleaning product, soap, or detergent.' },
   { icon: '🌿', title: 'Certified Organic Linens', body: 'Organic sheets and towels only. No harsh chemical treatments, artificial softeners, or dyes that trigger sensitive skin or respiratory reactions.' },
   { icon: '✨', title: 'Reiki Tummo® Charged', body: 'Every property is energetically cleansed and charged with Reiki Tummo® — crystals at the entryways, prayers, and intentional grounding into the earth.' },
   { icon: '🔮', title: 'Connected to True Source', body: 'The space is programmed to support healing, clarity, and spiritual connection. Guests arrive in a field that actively supports their well-being.' },
@@ -55,7 +44,6 @@ const pillars = [
 const reviews = [
   { text: '"One of the very few 5-star Airbnbs I\'ve stayed at that truly lives up to every detail. Immaculate, thoughtfully designed, and the hot tub was absolutely perfect after a day on the Parkway."', author: 'Adam', property: 'Asheville Getaway' },
   { text: '"Easy check-in, very clean and comfortable. Two living rooms, a beautiful kitchen, and the resort amenities made this the perfect family getaway. We\'ll absolutely be back."', author: 'Marie', property: 'Lake Lure Getaway' },
-  { text: '"Quiet, peaceful, and exactly what I needed. Something about this place just feels different — genuinely clean, not just surface-level clean."', author: 'Allison', property: 'Rumbling Bald Getaway' },
 ]
 
 const trustItems = ['Organic Linens & Towels', 'No Fragrances or Dyes', 'Medical-Grade Air Purification', 'Reiki Tummo® Charged', 'Asheville & Lake Lure, NC']
@@ -114,10 +102,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-forest">Our Properties</span>
-            <h2 className="font-lora text-4xl text-forest-dark mt-2 mb-4">Three Intentional Retreats</h2>
+            <h2 className="font-lora text-4xl text-forest-dark mt-2 mb-4">Two Intentional Retreats</h2>
             <p className="text-stone-muted max-w-xl mx-auto">Each property is personally curated, energetically prepared, and held to strict low-tox standards.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {properties.map((p) => (
               <article key={p.name} className="group bg-white rounded-2xl overflow-hidden border border-stone-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                 <div className="relative h-56 overflow-hidden">

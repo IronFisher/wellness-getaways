@@ -96,7 +96,6 @@ export default function ContactPage() {
                       <option value="">Select a property or topic</option>
                       <option value="Asheville Getaway">Asheville Getaway</option>
                       <option value="Lake Lure Getaway">Lake Lure Getaway</option>
-                      <option value="Rumbling Bald Getaway">Rumbling Bald Getaway</option>
                       <option value="Reiki Session">Reiki Session</option>
                       <option value="General Question">General Question</option>
                     </select>

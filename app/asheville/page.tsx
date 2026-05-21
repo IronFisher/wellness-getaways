@@ -13,7 +13,7 @@ const images = [
 ]
 
 const amenities = [
-  { category: 'Wellness', items: ['Medical-grade air purifiers (every room)', 'Organic cotton linens & towels', 'No synthetic fragrances or dyes', 'No Teflon cookware', 'Reiki Tummo® charged & grounded', 'Crystal placements at entryways'] },
+  { category: 'Wellness', items: ['Medical-grade air purifiers (one per floor)', 'Organic cotton linens & towels', 'No synthetic fragrances or dyes', 'No Teflon cookware', 'Reiki Tummo® charged & grounded', 'Crystal placements at entryways'] },
   { category: 'Comfort', items: ['Private hot tub', 'Electric fireplace', 'Dual en-suite bedrooms', 'Full gourmet kitchen', 'Smart TV + high-speed WiFi', 'In-unit washer/dryer'] },
   { category: 'Location', items: ['Minutes to downtown Asheville', 'Close to Blue Ridge Parkway', 'Cedar Cliff Village neighborhood', 'NC Green Built certified', 'Quiet residential setting', 'Mountain views'] },
 ]
@@ -79,7 +79,7 @@ export default function AshevillePage() {
                   Both bedrooms are fully en-suite with private baths — perfect for couples traveling together or a family that values individual space. A private hot tub on the back deck and a cozy electric fireplace in the living room complete the setting.
                 </p>
                 <p>
-                  Every product in this home has been hand-selected: no synthetic fragrances, no dyes, no harsh chemicals. Medical-grade air purifiers run continuously. The cookware is free of Teflon and PFAS. Linens are organic cotton. This is what a truly clean stay feels like.
+                  Soaps, detergents, and cleaning products throughout the home are dye-free and fragrance-free — the same conservative standard we hold across every Wellness Getaways property. Medical-grade air purifiers run continuously (one per floor). The cookware is free of Teflon and PFAS. Linens are organic cotton. This is what a truly clean stay feels like.
                 </p>
               </div>
             </div>
@@ -159,6 +159,7 @@ export default function AshevillePage() {
               baths="2"
               guests="4"
               highlights={['Hot Tub', 'Electric Fireplace', 'NC Green Built', 'Dual En-Suite', 'Low-Tox']}
+              bookingUrl="https://yondernc.com"
             />
           </div>
         </div>

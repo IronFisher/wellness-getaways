@@ -4,8 +4,7 @@ interface BookingCardProps {
   baths: string
   guests: string
   highlights: string[]
-  airbnbUrl?: string
-  yonderUrl?: string
+  bookingUrl?: string
   reikiUrl?: string
 }
 
@@ -15,8 +14,7 @@ export default function BookingCard({
   baths,
   guests,
   highlights,
-  airbnbUrl = '#',
-  yonderUrl,
+  bookingUrl = 'https://yondernc.com',
   reikiUrl = '/reiki',
 }: BookingCardProps) {
   return (
@@ -50,23 +48,13 @@ export default function BookingCard({
       </div>
 
       <a
-        href={airbnbUrl}
+        href={bookingUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full text-center py-3.5 rounded-full bg-forest text-white font-semibold hover:bg-forest-dark transition-colors duration-200 mb-3"
       >
-        Book on Airbnb
+        Book on Yonder
       </a>
-      {yonderUrl && (
-        <a
-          href={yonderUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full text-center py-3.5 rounded-full border border-forest text-forest font-semibold hover:bg-forest hover:text-white transition-colors duration-200 mb-3"
-        >
-          Book on Yonder
-        </a>
-      )}
       <a
         href={reikiUrl}
         className="block w-full text-center py-3 rounded-full border border-stone-border text-stone-muted text-sm hover:border-forest hover:text-forest transition-colors duration-200"
