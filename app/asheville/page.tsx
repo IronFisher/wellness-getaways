@@ -159,7 +159,7 @@ export default function AshevillePage() {
               baths="2"
               guests="4"
               highlights={['Hot Tub', 'Electric Fireplace', 'NC Green Built', 'Dual En-Suite', 'Low-Tox']}
-              bookingUrl="https://www.yondervacationrentals.com/vacation-rentals/rental/asheville-getaway/"
+              bookingUrl="https://www.yondervacationrentals.com/vacation-rentals/rental/asheville-getaway/?utm_source=thewellnessgetaways&utm_medium=referral"
             />
           </div>
         </div>

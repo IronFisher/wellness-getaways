@@ -50,7 +50,7 @@ export default function BookingCard({
       <a
         href={bookingUrl}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
         className="block w-full text-center py-3.5 rounded-full bg-forest text-white font-semibold hover:bg-forest-dark transition-colors duration-200 mb-3"
       >
         Book on Yonder

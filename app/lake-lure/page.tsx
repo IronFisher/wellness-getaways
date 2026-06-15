@@ -178,7 +178,7 @@ export default function LakeLurePage() {
               baths="2.5"
               guests="8"
               highlights={['Mountain Views', 'Resort Access', 'Private Balcony', 'Sleeps 8', 'Low-Tox']}
-              bookingUrl="https://www.yondervacationrentals.com/vacation-rentals/rental/lake-lure-getaway/"
+              bookingUrl="https://www.yondervacationrentals.com/vacation-rentals/rental/lake-lure-getaway/?utm_source=thewellnessgetaways&utm_medium=referral"
             />
           </div>
         </div>
