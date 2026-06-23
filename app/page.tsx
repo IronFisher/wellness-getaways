@@ -32,6 +32,35 @@ const properties = [
   },
 ]
 
+const comparison = [
+  {
+    name: 'Asheville Getaway',
+    tagline: "Best for a quiet couple's or solo reset",
+    href: '/asheville',
+    rows: [
+      { label: 'Best for', value: 'Couples & solo' },
+      { label: 'Sleeps', value: 'Up to 4' },
+      { label: 'Layout', value: '2 bed · 2 bath' },
+      { label: 'Setting', value: 'Green-built home near downtown' },
+      { label: 'Signature', value: 'Private hot tub' },
+      { label: 'From', value: '$189 / night' },
+    ],
+  },
+  {
+    name: 'Lake Lure Getaway',
+    tagline: 'Best for families & groups',
+    href: '/lake-lure',
+    rows: [
+      { label: 'Best for', value: 'Families & groups' },
+      { label: 'Sleeps', value: 'Up to 8' },
+      { label: 'Layout', value: '2 bed · 2.5 bath' },
+      { label: 'Setting', value: 'Mountain views, full resort' },
+      { label: 'Signature', value: 'Pools, spa, golf, kayaks' },
+      { label: 'From', value: '$289 / night' },
+    ],
+  },
+]
+
 const pillars = [
   { icon: '🌬️', title: 'Medical-Grade Air Quality', body: 'Medical-grade air purifiers — one per floor. No Teflon cookware. No synthetic fragrances or dyes in any cleaning product, soap, or detergent.' },
   { icon: '🌿', title: 'Certified Organic Linens', body: 'Organic sheets and towels only. No harsh chemical treatments, artificial softeners, or dyes that trigger sensitive skin or respiratory reactions.' },
@@ -132,8 +161,8 @@ export default function Home() {
                     <span className="font-lora text-2xl font-semibold text-forest-dark">From {p.price}</span>
                     <span className="text-sm text-stone-muted">/night</span>
                   </div>
-                  <Link href={p.href} className="px-4 py-2 rounded-full border border-forest text-forest text-sm font-semibold hover:bg-forest hover:text-white transition-colors duration-200">
-                    View →
+                  <Link href={p.href} className="px-4 py-2 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-dark transition-colors duration-200 shadow-sm">
+                    Check Availability →
                   </Link>
                 </div>
               </article>
@@ -142,8 +171,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Comparison ── */}
+      <section className="py-20 bg-cream-soft border-y border-stone-border" id="compare">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold uppercase tracking-widest text-forest">Compare at a Glance</span>
+            <h2 className="font-lora text-4xl text-forest-dark mt-2 mb-4">Which Getaway Is Right for You?</h2>
+            <p className="text-stone-muted max-w-xl mx-auto">Two very different retreats — here&apos;s how to choose the one that fits your trip.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {comparison.map((c) => (
+              <div key={c.name} className="bg-white rounded-2xl border border-stone-border shadow-sm overflow-hidden flex flex-col">
+                <div className="bg-forest text-white px-6 py-4">
+                  <h3 className="font-lora text-xl">{c.name}</h3>
+                  <p className="text-sm text-white/80">{c.tagline}</p>
+                </div>
+                <dl className="px-6">
+                  {c.rows.map((r) => (
+                    <div key={r.label} className="flex justify-between gap-4 py-3 text-sm border-b border-stone-border/60 last:border-0">
+                      <dt className="text-stone-muted">{r.label}</dt>
+                      <dd className="text-forest-dark font-medium text-right">{r.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <div className="px-6 pb-6 pt-4 mt-auto">
+                  <Link href={c.href} className="block w-full text-center px-4 py-3 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-dark transition-colors duration-200 shadow-sm">
+                    Check Availability →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Wellness Pillars ── */}
-      <section className="py-20 bg-cream-soft" id="wellness">
+      <section className="py-20 bg-cream" id="wellness">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-forest">The Wellness Difference</span>
@@ -163,7 +226,7 @@ export default function Home() {
       </section>
 
       {/* ── Reviews ── */}
-      <section className="py-20 bg-cream">
+      <section className="py-20 bg-cream-soft">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-forest">Guest Reviews</span>
