@@ -19,9 +19,11 @@ const amenities = [
 ]
 
 const reviews = [
-  { text: 'One of the very few 5-star Airbnbs I\'ve stayed at that truly lives up to every detail. Immaculate, thoughtfully designed, and the hot tub was absolutely perfect after a day on the Parkway.', author: 'Adam', date: 'January 2025' },
-  { text: 'As someone with MCS this was a revelation. I could actually sleep without a reaction. The air quality, the bedding, the products — all of it spotless. Already planning my next trip.', author: 'Sarah M.', date: 'February 2025' },
-  { text: 'Beautiful space, incredibly clean, and there\'s just a quality to the air and energy here that I\'ve never experienced in a rental. Our whole family felt genuinely rested.', author: 'Jennifer K.', date: 'March 2025' },
+  { text: "A beautiful comfortable home nestled between Asheville and Black Mountain. Loved getting together with family and spending time in the mountains.", author: 'Deanna', date: 'Verified Yonder guest · July 2025' },
+  { text: "Great location to Asheville and Black Mountain. Lots of hiking nearby. House was very clean. Exactly as pictured. Would recommend.", author: 'Christine', date: 'Verified Yonder guest · August 2024' },
+  { text: "This property was very clean. The location was great. We visited the Biltmore and ate downtown Asheville and everything was only 15 minutes and less away.", author: 'Diana', date: 'Verified Yonder guest · May 2024' },
+  { text: "This quaint little property was perfectly removed from the busyness of Asheville. The house was beautifully decorated and had everything we needed for our weekend away. We had a great time with our 1 year old. Would definitely come again!", author: 'Christopher', date: 'Verified Yonder guest · June 2023' },
+  { text: "Location is really good. Neighborhood is very safe. Rental is very clean. Rooms get a little warm if you dont keep the doors open.", author: 'Tom', date: 'Verified Yonder guest · May 2024' },
 ]
 
 export default function AshevillePage() {

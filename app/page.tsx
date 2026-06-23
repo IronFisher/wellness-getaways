@@ -71,8 +71,8 @@ const pillars = [
 ]
 
 const reviews = [
-  { text: '"One of the very few 5-star Airbnbs I\'ve stayed at that truly lives up to every detail. Immaculate, thoughtfully designed, and the hot tub was absolutely perfect after a day on the Parkway."', author: 'Adam', property: 'Asheville Getaway' },
-  { text: '"Easy check-in, very clean and comfortable. Two living rooms, a beautiful kitchen, and the resort amenities made this the perfect family getaway. We\'ll absolutely be back."', author: 'Marie', property: 'Lake Lure Getaway' },
+  { text: '"A beautiful comfortable home nestled between Asheville and Black Mountain. Loved getting together with family and spending time in the mountains."', author: 'Deanna', property: 'Asheville Getaway · via Yonder' },
+  { text: '"Walking into this condo was a great start to the visit. The look is clean and modern, it was spacious, well-outfitted, the layout with two lounging areas was perfect, and what a kitchen!"', author: 'Betty', property: 'Lake Lure Getaway · via Yonder' },
 ]
 
 const trustItems = ['Organic Linens & Towels', 'No Fragrances or Dyes', 'Medical-Grade Air Purification', 'Reiki Tummo® Charged', 'Asheville & Lake Lure, NC']
