@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Reiki Tummo® Sessions — Live Energy Healing | Wellness Getaways',
-  description: 'Book a live Reiki Tummo® or open heart meditation session with Kelly — remotely from anywhere in the world, or in-person during your stay in Asheville or Lake Lure, NC.',
+  description: 'Book a live Reiki Tummo® or open heart meditation session with Kelly — remotely from anywhere in the world, or in person in the Fort Mill, SC and greater Charlotte, NC area.',
 }
 
 const MASSAGEBOOK_INPERSON_URL = 'https://www.massagebook.com/business/14656123/booking/select-time?service_id=2017854&ncf_source=search_site&src=massagebook'
@@ -33,9 +33,9 @@ const sessions = [
     name: 'In-Person Session',
     duration: '80 min',
     price: '$155',
-    description: 'Available to guests staying at either Wellness Getaways property. Kelly visits your rental for a full hands-on Reiki Tummo® session in the comfort of your already-charged space.',
-    includes: ['In-room arrival and setup', '80-minute hands-on session', 'Crystal placement', 'Post-session grounding tea and guidance'],
-    best: 'Best for: guests staying at Asheville or Lake Lure properties',
+    description: 'A full hands-on Reiki Tummo® session, in person for those in the Fort Mill, SC and greater Charlotte, NC area. Settle into a calm, dedicated healing space for a deeply restorative session with Kelly.',
+    includes: ['Calm, dedicated healing space', '80-minute hands-on session', 'Crystal placement', 'Post-session grounding tea and guidance'],
+    best: 'Best for: clients in the Fort Mill & Charlotte area',
     bookUrl: MASSAGEBOOK_INPERSON_URL,
     bookLabel: 'Book Now',
   },
@@ -61,7 +61,7 @@ export default function ReikiPage() {
             Reiki Tummo®<br /><em>Sessions with Kelly</em>
           </h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Whether you&apos;re across the world or staying down the hall, Kelly channels True Source energy to support your healing, clarity, and spiritual connection. Available remotely or in-person at our properties.
+            Whether you&apos;re across the world or just across town, Kelly channels True Source energy to support your healing, clarity, and spiritual connection. Available remotely worldwide, or in person in the Fort Mill &amp; Charlotte area.
           </p>
           <a href="#sessions" className="inline-flex items-center px-8 py-4 rounded-full bg-white text-forest font-semibold hover:bg-cream transition-colors duration-200 shadow-lg">
             View Sessions & Pricing
