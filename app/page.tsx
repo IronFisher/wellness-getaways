@@ -11,6 +11,7 @@ const properties = [
   {
     name: 'Asheville Getaway',
     location: 'Asheville, NC · Cedar Cliff Village',
+    bestFor: "Best for a quiet couple's or solo reset",
     badge: 'Asheville',
     specs: ['2 Beds', '2 Baths', 'Up to 4'],
     highlights: ['Hot Tub', 'Electric Fireplace', 'NC Green Built'],
@@ -22,6 +23,7 @@ const properties = [
   {
     name: 'Lake Lure Getaway',
     location: 'Lake Lure, NC · Rumbling Bald Resort',
+    bestFor: 'Best for families & groups',
     badge: 'Lake Lure',
     specs: ['2 Beds', '2.5 Baths', 'Up to 8'],
     highlights: ['Mountain Views', 'Resort Access', 'Private Balcony'],
@@ -29,35 +31,6 @@ const properties = [
     price: '$289',
     href: '/lake-lure',
     image: 'https://cdn.prod.website-files.com/67ee03ef8aaa8b2ff966ef93/67ee7a651968d42ce95c63bd_image_165663209.webp',
-  },
-]
-
-const comparison = [
-  {
-    name: 'Asheville Getaway',
-    tagline: "Best for a quiet couple's or solo reset",
-    href: '/asheville',
-    rows: [
-      { label: 'Best for', value: 'Couples & solo' },
-      { label: 'Sleeps', value: 'Up to 4' },
-      { label: 'Layout', value: '2 bed · 2 bath' },
-      { label: 'Setting', value: 'Green-built home near downtown' },
-      { label: 'Signature', value: 'Private hot tub' },
-      { label: 'From', value: '$189 / night' },
-    ],
-  },
-  {
-    name: 'Lake Lure Getaway',
-    tagline: 'Best for families & groups',
-    href: '/lake-lure',
-    rows: [
-      { label: 'Best for', value: 'Families & groups' },
-      { label: 'Sleeps', value: 'Up to 8' },
-      { label: 'Layout', value: '2 bed · 2.5 bath' },
-      { label: 'Setting', value: 'Mountain views, full resort' },
-      { label: 'Signature', value: 'Pools, spa, golf, kayaks' },
-      { label: 'From', value: '$289 / night' },
-    ],
   },
 ]
 
@@ -145,7 +118,8 @@ export default function Home() {
                 </div>
                 <div className="p-5">
                   <p className="text-xs text-stone-muted font-medium mb-1">{p.location}</p>
-                  <h3 className="font-lora text-xl text-forest-dark mb-3">{p.name}</h3>
+                  <h3 className="font-lora text-xl text-forest-dark mb-2">{p.name}</h3>
+                  <p className="text-sm font-medium text-forest mb-3">★ {p.bestFor}</p>
                   <div className="flex gap-3 mb-3 text-sm text-stone-muted">
                     {p.specs.map(s => <span key={s}>{s}</span>)}
                   </div>
@@ -171,42 +145,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Comparison ── */}
-      <section className="py-20 bg-cream-soft border-y border-stone-border" id="compare">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-forest">Compare at a Glance</span>
-            <h2 className="font-lora text-4xl text-forest-dark mt-2 mb-4">Which Getaway Is Right for You?</h2>
-            <p className="text-stone-muted max-w-xl mx-auto">Two very different retreats — here&apos;s how to choose the one that fits your trip.</p>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-5">
-            {comparison.map((c) => (
-              <div key={c.name} className="bg-white rounded-2xl border border-stone-border shadow-sm overflow-hidden flex flex-col">
-                <div className="bg-forest text-white px-6 py-4">
-                  <h3 className="font-lora text-xl">{c.name}</h3>
-                  <p className="text-sm text-white/80">{c.tagline}</p>
-                </div>
-                <dl className="px-6">
-                  {c.rows.map((r) => (
-                    <div key={r.label} className="flex justify-between gap-4 py-3 text-sm border-b border-stone-border/60 last:border-0">
-                      <dt className="text-stone-muted">{r.label}</dt>
-                      <dd className="text-forest-dark font-medium text-right">{r.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-                <div className="px-6 pb-6 pt-4 mt-auto">
-                  <Link href={c.href} className="block w-full text-center px-4 py-3 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-dark transition-colors duration-200 shadow-sm">
-                    Check Availability →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Wellness Pillars ── */}
-      <section className="py-20 bg-cream" id="wellness">
+      <section className="py-20 bg-cream-soft" id="wellness">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-forest">The Wellness Difference</span>
@@ -226,7 +166,7 @@ export default function Home() {
       </section>
 
       {/* ── Reviews ── */}
-      <section className="py-20 bg-cream-soft">
+      <section className="py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-forest">Guest Reviews</span>
