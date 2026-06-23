@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: 'Book a live Reiki Tummo® or open heart meditation session with Kelly — remotely from anywhere in the world, or in-person during your stay in Asheville or Lake Lure, NC.',
 }
 
+const MASSAGEBOOK_URL = 'https://www.massagebook.com/business/14656123/booking/select-time?service_id=2017818&provider_id=30813724&ncf_source=search_site&src=massagebook'
+
 const sessions = [
   {
     name: 'Remote Reiki Tummo®',
@@ -14,6 +16,7 @@ const sessions = [
     description: 'A full distance healing session. You relax at home while Kelly channels Reiki Tummo® energy to support your physical, emotional, and spiritual well-being. No location required — energy has no boundaries.',
     includes: ['Pre-session intake form', '60-minute live distance healing', 'Post-session voice message with impressions', 'Follow-up grounding guidance'],
     best: 'Best for: deep clearing, chronic stress, emotional release, spiritual support',
+    bookUrl: MASSAGEBOOK_URL,
   },
   {
     name: 'Open Heart Meditation',
@@ -22,6 +25,7 @@ const sessions = [
     description: 'A guided meditation session using the Open Heart method — a gentle, heart-centered practice that helps you connect with True Source energy. Perfect for beginners and experienced meditators alike.',
     includes: ['Live Zoom or phone session', 'Heart-opening guided meditation', 'Personal energy transmission', 'Recorded audio to keep'],
     best: 'Best for: first-timers, stress relief, spiritual connection, clarity',
+    bookUrl: MASSAGEBOOK_URL,
   },
   {
     name: 'In-Person Session',
@@ -30,6 +34,7 @@ const sessions = [
     description: 'Available to guests staying at either Wellness Getaways property. Kelly visits your rental for a full hands-on Reiki Tummo® session in the comfort of your already-charged space.',
     includes: ['In-room arrival and setup', '75-minute hands-on session', 'Crystal placement', 'Post-session grounding tea and guidance'],
     best: 'Best for: guests staying at Asheville or Lake Lure properties',
+    bookUrl: MASSAGEBOOK_URL,
   },
 ]
 
@@ -125,7 +130,7 @@ export default function ReikiPage() {
                 </ul>
                 <p className="text-xs text-forest font-medium mb-4 italic">{s.best}</p>
                 <a
-                  href="https://www.thewellnessgetaways.com/reiki"
+                  href={s.bookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center py-3 rounded-full bg-forest text-white font-semibold text-sm hover:bg-forest-dark transition-colors duration-200"
@@ -162,7 +167,7 @@ export default function ReikiPage() {
           <h2 className="font-lora text-3xl mb-4">Ready to Experience It?</h2>
           <p className="text-white/70 mb-8">Book a session or pair it with a stay at one of our properties for a complete wellness retreat.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://www.thewellnessgetaways.com/reiki" target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 rounded-full bg-white text-forest font-semibold hover:bg-cream transition-colors duration-200">
+            <a href={MASSAGEBOOK_URL} target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 rounded-full bg-white text-forest font-semibold hover:bg-cream transition-colors duration-200">
               Book a Session
             </a>
             <Link href="/#properties" className="px-8 py-3.5 rounded-full border border-white/40 text-white font-semibold hover:bg-white/10 transition-colors duration-200">
